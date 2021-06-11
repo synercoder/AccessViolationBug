@@ -22,8 +22,8 @@ jobs:
         with:
           dotnet-version: ${{ matrix.sdk }}
       - name: Restore
-        run: dotnet restore -p:targetframework=${{ matrix.tfm }}
+        run: dotnet restore -p:TargetFramework=${{ matrix.tfm }}
       - name: Build
-        run: dotnet build -c Release --no-restore -p:targetframework=${{ matrix.tfm }}
+        run: dotnet build -c Release --no-restore -p:TargetFramework=${{ matrix.tfm }}
       - name: Test
-        run: dotnet test -c Release --no-restore --no-build -p:targetframework=${{ matrix.tfm }}
+        run: dotnet test -c Release --no-restore --no-build -p:TargetFramework=${{ matrix.tfm }}
