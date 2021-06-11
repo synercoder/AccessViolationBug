@@ -13,7 +13,6 @@ jobs:
       matrix:
         os: [ windows-latest ]
         sdk: [ '5.0.300', '5.0.301' ]
-        tfm: [ 'netcoreapp3.1', 'net5.0' ]
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -22,8 +21,8 @@ jobs:
         with:
           dotnet-version: ${{ matrix.sdk }}
       - name: Restore
-        run: dotnet restore -p:TargetFramework=${{ matrix.tfm }}
+        run: dotnet restore
       - name: Build
-        run: dotnet build -c Release --no-restore -p:TargetFramework=${{ matrix.tfm }}
+        run: dotnet build -c Release --no-restore
       - name: Test
-        run: dotnet test -c Release --no-restore --no-build -p:TargetFramework=${{ matrix.tfm }}
+        run: dotnet test -c Release --no-restore --no-build
