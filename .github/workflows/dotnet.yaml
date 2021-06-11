@@ -1,0 +1,26 @@
+name: .NET Core
+
+on: workflow_dispatch
+
+env:
+  # Stop wasting time caching packages
+  DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ ubuntu-latest, windows-latest, macos-latest ]
+        sdk: [ '5.0.300', '5.0.301' ]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: ${{ matrix.sdk }}
+      - name: Restore
+        run: dotnet restore
+      - name: Build
+        run: dotnet build -c Release --no-restore

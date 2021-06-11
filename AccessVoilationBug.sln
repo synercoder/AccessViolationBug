@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31402.337
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "root", "root", "{EA7A0DFC-CFB8-4A9C-A261-3F2C28D943B8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccessVoilationBug", "AccessVoilationBug\AccessVoilationBug.csproj", "{A8E7041E-FFC8-4C6C-8CDE-B29CA8215DAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{2D4175A1-1C8C-4CC3-9137-5E6A2239F93C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{28D545C2-7A57-4631-9E5C-1B92F81F7DC0}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\dotnet.yaml = .github\workflows\dotnet.yaml
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccessViolationBug.Tests", "AccessViolationBug.Tests\AccessViolationBug.Tests.csproj", "{C10AB787-88DE-4216-8687-D4718177931C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8E7041E-FFC8-4C6C-8CDE-B29CA8215DAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8E7041E-FFC8-4C6C-8CDE-B29CA8215DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8E7041E-FFC8-4C6C-8CDE-B29CA8215DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8E7041E-FFC8-4C6C-8CDE-B29CA8215DAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C10AB787-88DE-4216-8687-D4718177931C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C10AB787-88DE-4216-8687-D4718177931C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C10AB787-88DE-4216-8687-D4718177931C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C10AB787-88DE-4216-8687-D4718177931C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A8E7041E-FFC8-4C6C-8CDE-B29CA8215DAB} = {EA7A0DFC-CFB8-4A9C-A261-3F2C28D943B8}
+		{2D4175A1-1C8C-4CC3-9137-5E6A2239F93C} = {EA7A0DFC-CFB8-4A9C-A261-3F2C28D943B8}
+		{28D545C2-7A57-4631-9E5C-1B92F81F7DC0} = {2D4175A1-1C8C-4CC3-9137-5E6A2239F93C}
+		{C10AB787-88DE-4216-8687-D4718177931C} = {EA7A0DFC-CFB8-4A9C-A261-3F2C28D943B8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1727A9C-ED1F-44BB-A3C4-6A429D3BB864}
+	EndGlobalSection
+EndGlobal
